@@ -4,15 +4,15 @@ import { useObservable } from 'rxjs-hooks';
 
 export default () => {
   
-	const val = useObservable(() => interval(1000), 0);
+	const val = useObservable(() => interval(1000), -1);
 
   useEffect(() => {
-    console.log('在case02中监听', val);
+    console.log('在case03中监听', val);
   }, [val]);
 	
 	return (
     <>
-      <h2>case02</h2>
+      <h2>case03</h2>
       <p>{val}</p>
     </>
   );
